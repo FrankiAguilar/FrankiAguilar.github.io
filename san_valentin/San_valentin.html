@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Valentín</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff3366;
+        }
+        #gifContainer {
+            margin-top: 20px;
+        }
+        img {
+            max-width: 300px;
+            margin-top: 10px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .yes {
+            background-color: #ff3366;
+            color: white;
+        }
+        .no {
+            background-color: #cccccc;
+            color: black;
+        }
+    </style>
+    <script>
+        function changeGif(response) {
+            const gifContainer = document.getElementById('gifContainer');
+            if (response === 'yes') {
+                document.getElementById('gifImage').src = "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3NqMWtjcXFnZzlyMXhzdGhnbGZtcTM4djNpenZsajQ0czRwNHN1ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ES6v5MR2QpeqbuwdBc/giphy.gif";
+            } else {
+                document.getElementById('gifImage').src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTY1cGFodjV2cmJvZ2M2MWlzcnRyZTc0aGhqdGUxYWE3czRrcTlrbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/W4zO9PSNXYMiYefZ4T/giphy.gif";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>¿Quieres ser mi San Valentín? ❤️</h1>
+    <div id="gifContainer">
+        <img id="gifImage" src="C:\Users\Franki Aguilar\OneDrive\Escritorio\pich y goma.gif" alt="GIF de San Valentín">
+    </div>
+    <div class="buttons">
+        <button class="yes" onclick="changeGif('yes')">Sí</button>
+        <button class="no" onclick="changeGif('no')">No</button>
+    </div>
+</body>
+</html>
